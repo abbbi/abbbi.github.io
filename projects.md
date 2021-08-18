@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-Some little projects i like to work on in my spare time.
+Small projects i like to work on in my spare time.
 
 ### virtnbdbackup
 
