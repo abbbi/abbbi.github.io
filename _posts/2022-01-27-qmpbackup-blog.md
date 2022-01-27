@@ -14,9 +14,9 @@ processes: [qmpbackup](https://github.com/abbbi/qmpbackup)
 The workflow for this is a little bit different from the approach i have taken
 with [virtnbdbackup](https://github.com/abbbi/virtnbdbackup).
 
-While with libvirt managed virtual machines, the libvirt api provides all
-necessary API calls to create backups, a running qemu process only gives the
-QMP protocol to get things going.
+While with libvirt managed virtual machines, the libvirt API provides all
+necessary API calls to create backups, a running qemu process only provides the
+QMP protocol socket to get things going.
 
 **So how does it work**?
 
@@ -31,7 +31,7 @@ Now you can easily make qemu push the latest data for a created bitmap
 to a given target directory:
 
 {% highlight bash %}
-# qmpbackup --agent-socket $AGENT_SOCKET --socket /tmp/socket backup --level full --target /tmp/backup/
+# qmpbackup --socket /tmp/socket backup --level full --target /tmp/backup/
 [2022-01-27 17:12:15,068]    INFO  Version: 0.10
 [2022-01-27 17:12:15,069]    INFO  Qemu version: [5.0.2] [Debian 1:5.2+dfsg-11+deb11u1]
 [2022-01-27 17:12:20,073]    INFO  Backup target directory: /tmp/backup/
