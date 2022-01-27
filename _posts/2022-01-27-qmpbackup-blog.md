@@ -32,16 +32,21 @@ to a given target directory:
 
 {% highlight bash %}
 # qmpbackup --socket /tmp/socket backup --level full --target /tmp/backup/
-[2022-01-27 17:12:15,068]    INFO  Version: 0.10
-[2022-01-27 17:12:15,069]    INFO  Qemu version: [5.0.2] [Debian 1:5.2+dfsg-11+deb11u1]
-[2022-01-27 17:12:20,073]    INFO  Backup target directory: /tmp/backup/
-[2022-01-27 17:12:20,073]    INFO  FULL Backup operation: "/tmp/backup//ide0-hd0/FULL-1643299940"
-[2022-01-27 17:12:20,081]    INFO  Wrote Offset: 0 of 2147483648
-[2022-01-27 17:12:21,082]    INFO  Wrote Offset: 581566464 of 2147483648
-[2022-01-27 17:12:22,084]    INFO  Wrote Offset: 765067264 of 2147483648
-[2022-01-27 17:12:23,085]    INFO  Wrote Offset: 970129408 of 2147483648
-[2022-01-27 17:12:26,465]    INFO  Saved disk: [ide0-hd0]
-[2022-01-27 17:12:33,487]    INFO  Finished
+[2022-01-27 19:41:33,819]    INFO  Version: 0.10
+[2022-01-27 19:41:33,819]    INFO  Qemu version: [5.0.2] [Debian 1:5.2+dfsg-11+deb11u1]
+[2022-01-27 19:41:33,825]    INFO  Guest Agent socket connected
+[2022-01-27 19:41:33,825]    INFO  Trying to ping guest agent
+[2022-01-27 19:41:38,827] WARNING  Unable to reach Guest Agent: cant freeze file systems.
+[2022-01-27 19:41:38,828]    INFO  Backup target directory: /tmp/backup/
+[2022-01-27 19:41:38,828]    INFO  FULL Backup operation: "/tmp/backup//ide0-hd0/FULL-1643308898"
+[2022-01-27 19:41:38,836]    INFO  Wrote Offset: 0% (0 of 2147483648)
+[2022-01-27 19:41:39,838]    INFO  Wrote Offset: 25% (541065216 of 2147483648)
+[2022-01-27 19:41:40,840]    INFO  Wrote Offset: 33% (701890560 of 2147483648)
+[2022-01-27 19:41:41,841]    INFO  Wrote Offset: 40% (867041280 of 2147483648)
+[2022-01-27 19:41:42,844]    INFO  Wrote Offset: 50% (1073741824 of 2147483648)
+[2022-01-27 19:41:43,846]    INFO  Wrote Offset: 59% (1269760000 of 2147483648)
+[2022-01-27 19:41:44,847]    INFO  Wrote Offset: 75% (1610612736 of 2147483648)
+[2022-01-27 19:41:45,848]    INFO  Saved disk: [ide0-hd0]
 {% endhighlight %}
 
 The resulting directory now contains a full backup image of the disk attached.
@@ -50,13 +55,15 @@ From this point on, its possible to create further incremental backups:
 
 {% highlight bash %}
 # qmpbackup  --socket /tmp/socket backup --level inc --target /tmp/backup/
-[2022-01-27 17:12:43,544]    INFO  Version: 0.10
-[2022-01-27 17:12:43,545]    INFO  Qemu version: [5.0.2] [Debian 1:5.2+dfsg-11+deb11u1]
-[2022-01-27 17:12:48,553]    INFO  Backup target directory: /tmp/backup/
-[2022-01-27 17:12:48,553]    INFO  INC Backup operation: "/tmp/backup//ide0-hd0/INC-1643299968"
-[2022-01-27 17:12:48,568]    INFO  Wrote Offset: 0 of 8257536
-[2022-01-27 17:12:49,571]    INFO  Saved disk: [ide0-hd0]
-[2022-01-27 17:12:49,687]    INFO  Finished
+[2022-01-27 19:42:03,930]    INFO  Version: 0.10
+[2022-01-27 19:42:03,931]    INFO  Qemu version: [5.0.2] [Debian 1:5.2+dfsg-11+deb11u1]
+[2022-01-27 19:42:03,933]    INFO  Guest Agent socket connected
+[2022-01-27 19:42:03,933]    INFO  Trying to ping guest agent
+[2022-01-27 19:42:08,938] WARNING  Unable to reach Guest Agent: cant freeze file systems.
+[2022-01-27 19:42:08,939]    INFO  Backup target directory: /tmp/backup/
+[2022-01-27 19:42:08,939]    INFO  INC Backup operation: "/tmp/backup//ide0-hd0/INC-1643308928"
+[2022-01-27 19:42:08,953]    INFO  Wrote Offset: 0% (0 of 1835008)
+[2022-01-27 19:42:09,957]    INFO  Saved disk: [ide0-hd0]
 {% endhighlight %}
 
 The target directory will now have multiple data backups:
