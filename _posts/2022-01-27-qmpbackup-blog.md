@@ -52,13 +52,11 @@ From this point on, its possible to create further incremental backups:
 # qmpbackup  --socket /tmp/socket backup --level inc --target /tmp/backup/
 [2022-01-27 17:12:43,544]    INFO  Version: 0.10
 [2022-01-27 17:12:43,545]    INFO  Qemu version: [5.0.2] [Debian 1:5.2+dfsg-11+deb11u1]
-[2022-01-27 17:12:43,546]    INFO  Guest Agent socket connected
-[2022-01-27 17:12:43,546]    INFO  Trying to ping guest agent
-[2022-01-27 17:12:48,552] WARNING  Unable to reach Guest Agent: cant freeze file systems.
 [2022-01-27 17:12:48,553]    INFO  Backup target directory: /tmp/backup/
 [2022-01-27 17:12:48,553]    INFO  INC Backup operation: "/tmp/backup//ide0-hd0/INC-1643299968"
 [2022-01-27 17:12:48,568]    INFO  Wrote Offset: 0 of 8257536
 [2022-01-27 17:12:49,571]    INFO  Saved disk: [ide0-hd0]
+[2022-01-27 17:12:49,687]    INFO  Finished
 {% endhighlight %}
 
 The target directory will now have multiple data backups:
