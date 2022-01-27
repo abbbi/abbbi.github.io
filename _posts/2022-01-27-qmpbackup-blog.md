@@ -18,6 +18,15 @@ While with libvirt managed virtual machines, the libvirt API provides all
 necessary API calls to create backups, a running qemu process only provides the
 QMP protocol socket to get things going.
 
+Using the QMP protocol its possible to create bitmaps for the attached disks
+and make Qemu push the contents of the bitmaps to a specified target directory.
+As the bitmaps keep track of the changes on the attached block devices, you can
+create incremental backups too.
+
+The nice thing here is that the Qemu process actually does this all by itself
+and you dont have to care about which blocks are dirty, like you would have
+to do with the [Pull based](https://libvirt.org/kbase/live_full_disk_backup.html) approach.
+
 **So how does it work**?
 
 The utility requires to start your qemu process with an active QMP socket
@@ -70,23 +79,24 @@ The target directory will now have multiple data backups:
 
 {% highlight bash %}
 /tmp/backup/ide0-hd0/
-├── FULL-1643299940
-└── INC-1643299968
+├── FULL-1643308898
+└── INC-1643308928
 {% endhighlight %}
 
 **Restoring the image**
 
 Using the `qmprebase` utility you can now rebase the images to the latest
-state, the `--dry-run` option gives an good impression which command sequences
-are required, if one wants only rebase to a specific incremental backup:
+state. The `--dry-run` option gives an good impression which command sequences
+are required, if one wants only rebase to a specific incremental backup, thats
+possible using the `--until` option.
 
 {% highlight bash %}
 # qmprebase rebase --dir /tmp/backup/ide0-hd0/ --dry-run
 [2022-01-27 17:18:08,790]    INFO  Version: 0.10
 [2022-01-27 17:18:08,790]    INFO  Dry run activated, not applying any changes
-[2022-01-27 17:18:08,790]    INFO  qemu-img check /tmp/backup/ide0-hd0/INC-1643299968
-[2022-01-27 17:18:08,791]    INFO  qemu-img rebase -b "/tmp/backup/ide0-hd0/FULL-1643299940" "/tmp/backup/ide0-hd0/INC-1643299968" -u
-[2022-01-27 17:18:08,791]    INFO  qemu-img commit "/tmp/backup/ide0-hd0/INC-1643299968"
+[2022-01-27 17:18:08,790]    INFO  qemu-img check /tmp/backup/ide0-hd0/INC-1643308928
+[2022-01-27 17:18:08,791]    INFO  qemu-img rebase -b "/tmp/backup/ide0-hd0/FULL-1643308898" "/tmp/backup/ide0-hd0/INC-1643308928" -u
+[2022-01-27 17:18:08,791]    INFO  qemu-img commit "/tmp/backup/ide0-hd0/INC-1643308928"
 [2022-01-27 17:18:08,791]    INFO  Rollback of latest [FULL]<-[INC] chain complete, ignoring older chains
 [2022-01-27 17:18:08,791]    INFO  Image files rollback successful.
 {% endhighlight %}
