@@ -6,4 +6,4 @@ permalink: /about/
 
 ### Contact me
 
-[ma@sep.de](mailto:ma@sep.de)
+[abi@grinser.de](mailto:abi@grinser.de)
