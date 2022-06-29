@@ -6,14 +6,14 @@ title: More work on virtnbdbackup
 Had some time to add more features to my libvirt backup utility, now it
 supports:
 
- * backing up virtual domains UEFI bios, initrd and kernel images if
-   defined.
+ * Added backup mode differencial.
+ * Save virtual domains UEFI bios, initrd and kernel images if defined.
  * `virtnbdmap` now uses the nbdkit COW plugin to map the backups as regular
    NBD device. This allows users to replay complete backup chains
-   (full+inc/diff) to recover single files. Also makes the mapped device
+   (full+inc/diff) to recover single files. This makes the resulting device
    writable, as such one can directly boot the virtual machine from the backup
    images.
-   
+
 Check out my [last article](https://abbbi.github.io/debian/) on that
 topic or [watch it in action.](https://www.youtube.com/watch?v=dOE0iB-CEGM)
 
