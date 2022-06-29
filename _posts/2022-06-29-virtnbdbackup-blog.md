@@ -17,6 +17,10 @@ supports:
 Check out my [last article](https://abbbi.github.io/debian/) on that
 topic or [watch it in action.](https://www.youtube.com/watch?v=dOE0iB-CEGM)
 
+The dirty bitmap feature now seems to be enabled by default as of newer qemu
+and libvirt (8.2.x) versions, seems the "tech preview" time might come to and
+end.
+
 As a side note: still there's an [RFP](https://bugs.debian.org/1003167) open,
 if one is interested in maintaining, as i find myself not having a valid
 key in the keyring.. laziness.
