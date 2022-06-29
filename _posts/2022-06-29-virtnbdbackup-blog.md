@@ -10,8 +10,8 @@ supports:
  * Save virtual domains UEFI bios, initrd and kernel images if defined.
  * `virtnbdmap` now uses the nbdkit COW plugin to map the backups as regular
    NBD device. This allows users to replay complete backup chains
-   (full+inc/diff) to recover single files. This makes the resulting device
-   writable, as such one can directly boot the virtual machine from the backup
+   (full+inc/diff) to recover single files. As the resulting device is
+   writable, one can directly boot the virtual machine from the backup
    images.
 
 Check out my [last article](https://abbbi.github.io/debian/) on that
