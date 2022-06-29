@@ -18,5 +18,5 @@ Check out my [last article](https://abbbi.github.io/debian/) on that
 topic or [watch it in action.](https://www.youtube.com/watch?v=dOE0iB-CEGM)
 
 As a side note: still there's an [RFP](https://bugs.debian.org/1003167) open,
-if one is interested in maintaining, as i find myself still not having a valid
-key in the keyring..still, ..
+if one is interested in maintaining, as i find myself not having a valid
+key in the keyring.. laziness.
