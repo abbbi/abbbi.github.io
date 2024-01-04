@@ -4,11 +4,12 @@ title: Projects
 permalink: /projects/
 ---
 
-Free software projects i like to work on in my spare time. I'm contributing
-to the Debian project [Debian project](https://qa.debian.org/developer.php?login=abi%40debian.org)
-as well.
+A (very short) list of Free software projects i like to work on in my spare
+time. I'm contributing to the [Debian
+project](https://qa.debian.org/developer.php?login=abi%40debian.org) as well.
 
-You can [sponsor](https://github.com/sponsors/abbbi) me if you like.
+If you find any of these useful, consider [buying me a
+beer](https://github.com/sponsors/abbbi) ;)
 
 ### virtnbdbackup
 
