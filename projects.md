@@ -30,3 +30,21 @@ A virtual black hole file system that behaves like /dev/null, implemented as
 linux kernel module:
 
 [nullfsvfs](https://github.com/abbbi/nullfsvfs)
+
+### sshcont
+
+ssh daemon that starts and enters a throwaway docker container for testing
+
+[sshcont](https://github.com/abbbi/sshcont)
+
+### xcup
+
+Command line utility for publishing paraglider flights on DHV-XC
+
+[xcup](https://github.com/abbbi/xcup)
+
+### xcbackup
+
+Export all your flights from DHV-XC Portal
+
+[xcbackup](https://github.com/abbbi/xcbackup)
