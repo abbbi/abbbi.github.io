@@ -11,8 +11,7 @@ Lately, i wanted to access VM backups from a Proxmox Backup Server via network
 
 For example, to test-boot a virtual machine snapshot directly from a backup.
 NBD suits that usecase quite well, so i quickly put a nbdkit plugin together
-that can be used to access virtual machine disk backups from proxmox backup
-server via NBD.
+that can be used for this.
 
 The available [golang
 bindings](https://github.com/elbandi/go-proxmox-backup-client) for the proxmox
