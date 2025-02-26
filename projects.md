@@ -48,3 +48,10 @@ Command line utility for publishing paraglider flights on DHV-XC
 Export all your flights from DHV-XC Portal
 
 [xcbackup](https://github.com/abbbi/xcbackup)
+
+
+### pbsnbd
+
+nbdkit plugin for Proxmox Backup Server
+
+[pbsnbd](https://github.com/abbbi/pbsnbd)
