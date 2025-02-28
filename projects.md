@@ -54,4 +54,10 @@ Export all your flights from DHV-XC Portal
 
 nbdkit plugin for Proxmox Backup Server
 
+golang version:
+
 [pbsnbd](https://github.com/abbbi/pbsnbd)
+
+C version:
+
+[cpbsnbd](https://github.com/abbbi/cpbsnbd)
