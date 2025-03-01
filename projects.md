@@ -61,3 +61,10 @@ golang version:
 C version:
 
 [cpbsnbd](https://github.com/abbbi/cpbsnbd)
+
+### pbsav
+
+Scan backups on Proxmox backup server via clamav:
+
+[pbsav](https://github.com/abbbi/pbsav)
+
