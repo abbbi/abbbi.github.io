@@ -22,7 +22,9 @@ following:
  * Spin up an QEMU virtual machine
  * Manually install the system, all in default except for one special setting:
    In the Network connection details, "Edit Binding settings" and set the
-   Interface to Unbound, leave DHCP in place.
+   Interface to not bind a particular MAC address or interface. This will make
+   the system pick whatever network device naming scheme is applied during
+   boot.
  * After installation has finished, shutdown.
 
 Now, there are several guestfs-tools that can be used to work on the
