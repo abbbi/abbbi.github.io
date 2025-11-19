@@ -1,6 +1,6 @@
 ---
 layout: post
-title: building SLES 16 vagrant-libvirt images using guestfs tools
+title: building SLES 16 vagrant/libvirt images using guestfs tools
 ---
 
 SLES 16 has been released. In the past, SUSE offered ready built vagrant
