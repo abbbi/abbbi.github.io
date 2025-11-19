@@ -12,9 +12,9 @@ service to build the images by yourself, but i couldn't find any templates
 for SLES 16.
 
 Naturally, there are several ways to build images, and the tooling around
-involves kiwi-ng, opensuse build service, or packer recipes etc.. (the latter
-may not work anymore, as Yast has been replaced by a new installer, called
-agma). All pretty complicated, ...
+involves kiwi-ng, opensuse build service, or packer recipes etc.. (existing
+packer recipes wont work anymore, as Yast has been replaced by a new installer,
+called agma). All pretty complicated, ...
 
 So my current take on creating a vagrant image for SLE16 has been the
 following:
