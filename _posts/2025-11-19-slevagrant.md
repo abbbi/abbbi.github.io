@@ -27,8 +27,7 @@ following:
    boot.
  * After installation has finished, shutdown.
 
-Now, there are several guestfs-tools that can be used to work on the
-created qcow2 image:
+Two guestfs-tools that can now be used to modify the created qcow2 image:
 
  * run virt-sysrpep on the image to wipe settings that might cause troubles:
 
@@ -75,13 +74,13 @@ systemctl enable sshd
  * use virt-customize to upload the script into the qcow image:
 
 {% highlight bash %}
- virt-customize -v -x -a sle16.qcow2 --upload vagrant.sh:/tmp/vagrant.sh
+ virt-customize -a sle16.qcow2 --upload vagrant.sh:/tmp/vagrant.sh
 {% endhighlight %}
 
  * execute the script via:
 
 {% highlight bash %}
- virt-customize -a sle16.qcow2 -v --run-command "/tmp/vagrant.sh"
+ virt-customize -a sle16.qcow2 --run-command "/tmp/vagrant.sh"
 {% endhighlight %}
 
 After this, use the create-box.sh from the vagrant-libvirt project
