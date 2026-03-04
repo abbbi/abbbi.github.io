@@ -68,3 +68,14 @@ Scan backups on Proxmox backup server via clamav:
 
 [pbsav](https://github.com/abbbi/pbsav)
 
+### pbsindex
+
+Create a file index for your proxmox-client backups:
+
+[pbindex](https://github.com/abbbi/pbsindex)
+
+### igcviewer
+
+A 3D Flight viewer for IGC files:
+
+[igcviewer](https://github.com/abbbi/igcviewer)
