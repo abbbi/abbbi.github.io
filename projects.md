@@ -79,3 +79,10 @@ Create a file index for your proxmox-client backups:
 A 3D Flight viewer for IGC files:
 
 [igcviewer](https://github.com/abbbi/igcviewer)
+
+
+### vmsync
+
+incrementally replicate libvirt based virtual machines to remote hosts using dirty bitmaps.
+
+[vmsync](https://grinser.de/~abi/vmsync/)
